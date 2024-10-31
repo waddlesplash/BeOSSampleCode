@@ -9,6 +9,11 @@
 #include <OS.h>
 #include <malloc.h>
 
+// This got renamed on hrev58151.
+#ifndef B_MTR_WC
+	#define B_MTR_WC B_WRITE_COMBINING_MEMORY 
+#endif
+
 /* this is for the standardized portion of the driver API */
 /* currently only one operation is defined: B_GET_ACCELERANT_SIGNATURE */
 #include <graphic_driver.h>
